@@ -10,6 +10,7 @@ def show_session(key):
 
     session["hello"] = session.get("hello") or "World"
     session["goodnight"] = session.get("goodnight") or "Moon"
+    session["car"] = session.get("car") or "Lexus"
 
     response = make_response(jsonify({
         'session': {
@@ -26,5 +27,5 @@ def show_session(key):
     return response
 
 if __name__ == '__main__':
-    app.run(port=5555)
+    app.run(port=5555, debug=True)
     
